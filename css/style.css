@@ -12,6 +12,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root{
     --main-font-family: "Roboto", "Arial", sans-serif;
     --main-regular-font-weight: 400;
@@ -220,6 +227,7 @@ body{
 }
 
 .our_collection {
+    overflow: hidden;
     margin: 20px;
     padding: 50px 0;
     background-image: url("../images/main-bg-top.jpg");
@@ -445,11 +453,26 @@ body{
 }
 
 .how_it_works {
+    position: relative;
+    overflow: hidden;
     margin-right: 20px;
     margin-bottom: 50px;
     margin-left: 20px;
     padding: 50px 30px;
     background-image: url("../images/main-bg-bottom.jpg");
+}
+.how_it_works::before{
+    position: absolute;
+    top: 90px;
+    left: calc(50% + 410px);
+    display: inline-block;
+    width: 192px;
+    height: 129px;
+    background-image: url("../images/label-2.svg");
+    background-position: center;
+    background-size: 192px auto;
+    background-repeat: no-repeat;
+    content: "";
 }
 
 .how_it_works-text {
